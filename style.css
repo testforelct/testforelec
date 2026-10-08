@@ -175,3 +175,17 @@ footer a:hover { color: #fff; }
 /* Keep footer at the bottom on short pages */
 body { min-height: 100vh; display: flex; flex-direction: column; }
 main { flex: 1; }
+
+/* ---------- Principal investigators ---------- */
+.pi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.pi-card { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; background: #fff; box-shadow: var(--shadow); }
+.pi-head { display: flex; gap: 16px; align-items: center; margin-bottom: 14px; }
+.pi-photo { position: relative; flex: none; width: 84px; height: 84px; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, var(--accent), var(--navy-2)); display: grid; place-items: center; }
+.pi-photo span { color: #fff; font-weight: 700; font-size: 1.3rem; letter-spacing: .04em; }
+.pi-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.pi-card h3 { margin: 0 0 2px; font-size: 1.15rem; }
+.pi-role { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.4; }
+.pi-bio { font-size: .95rem; margin: 0 0 14px; flex: 1; }
+.pi-link { font-weight: 600; font-size: .92rem; text-decoration: none; }
+.pi-link:hover { text-decoration: underline; }
+@media (max-width: 760px) { .pi-grid { grid-template-columns: 1fr; } }
