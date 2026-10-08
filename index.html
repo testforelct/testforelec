@@ -4,36 +4,63 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | ELECTRANS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <a class="logo" href="index.html">ELECTRANS</a>
-      <nav>
+      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"></span>ELECTRANS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" onclick="var n=document.getElementById('site-nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">Menu</button>
+      <nav id="site-nav" aria-label="Main">
         <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="panel.html">The Panel</a></li>
-        <li><a href="how-to-submit.html">How to Submit</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="news.html">News and Announcements</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="panel.html">The Panel</a></li>
+          <li><a href="how-to-submit.html">How to Submit</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <div class="page-title">
-    <div class="container">
-      <h1>Home</h1>
+  <div class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">2027 French elections</p>
+        <h1>Propose survey questions for the 2027 ELECTRANS surveys</h1>
+        <p>ELECTRANS is a research project funded by the French National Research Agency (ANR) and devoted to the 2027 French elections.</p>
+        <p>Researchers are invited to propose survey questions, question batteries, modules, or experimental designs. Selected questions will be fielded at no cost to the researchers submitting them.</p>
+      </div>
+      <div class="dates">
+        <h2>Key dates</h2>
+        <ol>
+          <li><span class="when">December 31, 2026</span><span class="what">Deadline for proposals. Applications are considered on a rolling basis, so we encourage you to apply early.</span></li>
+          <li><span class="when">January 2027</span><span class="what">The panel begins. Four survey waves are planned; exact fieldwork dates are still being determined.</span></li>
+          <li><span class="when">Late February</span><span class="what">Latest date by which applicants whose proposals are not selected will receive a notification email.</span></li>
+        </ol>
+      </div>
     </div>
   </div>
 
   <main>
     <div class="container">
       <section>
-        <p class="lead">ELECTRANS is a research project funded by the French National Research Agency (ANR) and devoted to the 2027 French elections.</p>
+        <div class="nav-cards">
+          <a class="nav-card" href="about.html"><span class="t">About</span><span class="d">The project, its partner institutions, and principal investigators.</span></a>
+          <a class="nav-card" href="panel.html"><span class="t">The Panel</span><span class="d">A longitudinal online panel of approximately 10,000 respondents.</span></a>
+          <a class="nav-card" href="how-to-submit.html"><span class="t">How to Submit</span><span class="d">The submission template and instructions for sending your proposal.</span></a>
+          <a class="nav-card" href="faq.html"><span class="t">FAQ</span><span class="d">Eligibility, proposal length, survey design, ethics, and decisions.</span></a>
+          <a class="nav-card" href="news.html"><span class="t">News and Announcements</span><span class="d">Updates on the call for proposals and the ELECTRANS surveys.</span></a>
+          <a class="nav-card" href="contact.html"><span class="t">Contact Us</span><span class="d">Who to email for each type of question.</span></a>
+        </div>
+      </section>
+      <section class="narrow">
+        <h2>The call for proposals</h2>
         <p>ELECTRANS will conduct several major surveys surrounding the 2027 French elections. The goal is both to advance research on electoral behavior and political attitudes and to create a shared research infrastructure that can be used by the broader scientific community.</p>
         <p>As part of this commitment, ELECTRANS has launched an open call for question proposals. Researchers are invited to propose survey questions, question batteries, modules, or experimental designs for possible inclusion in the 2027 ELECTRANS surveys.</p>
         <p>Depending on their design and feasibility, selected proposals may be included in one or more waves of the ELECTRANS surveys. Selected questions will be fielded at no cost to the researchers submitting them. Data produced through ELECTRANS will subsequently be made available to the scientific community in accordance with the project&rsquo;s open-science and data-protection policies.</p>
@@ -54,7 +81,8 @@
 
   <footer>
     <div class="container">
-      <p>ELECTRANS &middot; French National Research Agency (ANR)</p>
+      <p>ELECTRANS &middot; Funded by the French National Research Agency (ANR)</p>
+      <p><a href="faq.html">FAQ</a><a href="contact.html">Contact Us</a></p>
     </div>
   </footer>
 </body>

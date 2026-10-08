@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About ELECTRANS | ELECTRANS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <a class="logo" href="index.html">ELECTRANS</a>
-      <nav>
+      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"></span>ELECTRANS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" onclick="var n=document.getElementById('site-nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">Menu</button>
+      <nav id="site-nav" aria-label="Main">
         <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="panel.html">The Panel</a></li>
-        <li><a href="how-to-submit.html">How to Submit</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="news.html">News and Announcements</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active" aria-current="page">About</a></li>
+          <li><a href="panel.html">The Panel</a></li>
+          <li><a href="how-to-submit.html">How to Submit</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -26,15 +30,24 @@
 
   <div class="page-title">
     <div class="container">
-      <h1>About ELECTRANS</h1>
+      <p class="eyebrow">About</p><h1>About ELECTRANS</h1>
     </div>
   </div>
 
   <main>
     <div class="container">
-      <section>
+      <section class="narrow">
         <p class="lead">ELECTRANS is a research project funded by the French National Research Agency (ANR) and devoted to the 2027 French elections.</p>
-        <p>The project brings together researchers and institutions across the French electoral research community, including CEVIPOF &ndash; Sciences Po, Sciences Po Bordeaux, Sciences Po Grenoble, Universit&eacute; de Lille, Toulouse School of Economics, Progedo, and CDSP &ndash; Sciences Po/CNRS.</p>
+        <p>The project brings together researchers and institutions across the French electoral research community, including:</p>
+        <ul class="institutions">
+          <li>CEVIPOF &ndash; Sciences Po</li>
+          <li>Sciences Po Bordeaux</li>
+          <li>Sciences Po Grenoble</li>
+          <li>Universit&eacute; de Lille</li>
+          <li>Toulouse School of Economics</li>
+          <li>Progedo</li>
+          <li>CDSP &ndash; Sciences Po/CNRS</li>
+        </ul>
         <p>ELECTRANS will conduct several major surveys surrounding the 2027 French elections. Our goal is both to advance research on electoral behavior and political attitudes and to create a shared research infrastructure that can be used by the broader scientific community.</p>
         <p>ELECTRANS is a collaborative infrastructure intended to strengthen cumulative research on elections in France.</p>
       </section>
@@ -56,7 +69,8 @@
 
   <footer>
     <div class="container">
-      <p>ELECTRANS &middot; French National Research Agency (ANR)</p>
+      <p>ELECTRANS &middot; Funded by the French National Research Agency (ANR)</p>
+      <p><a href="faq.html">FAQ</a><a href="contact.html">Contact Us</a></p>
     </div>
   </footer>
 </body>

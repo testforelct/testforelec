@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Panel | ELECTRANS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <a class="logo" href="index.html">ELECTRANS</a>
-      <nav>
+      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"></span>ELECTRANS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" onclick="var n=document.getElementById('site-nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">Menu</button>
+      <nav id="site-nav" aria-label="Main">
         <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="panel.html" class="active">The Panel</a></li>
-        <li><a href="how-to-submit.html">How to Submit</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="news.html">News and Announcements</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="panel.html" class="active" aria-current="page">The Panel</a></li>
+          <li><a href="how-to-submit.html">How to Submit</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -26,13 +30,13 @@
 
   <div class="page-title">
     <div class="container">
-      <h1>The Panel</h1>
+      <p class="eyebrow">Data collection</p><h1>The Panel</h1>
     </div>
   </div>
 
   <main>
     <div class="container">
-      <section>
+      <section class="narrow">
         <p class="lead">ELECTRANS is a large longitudinal online panel that will follow approximately 10,000 respondents throughout the 2027 electoral cycle, beginning in January 2027. Ipsos, a leading French market research company, will be responsible for data collection.</p>
         <p>We will share relevant documentation and technical information as it becomes available, including details on standard panel profile variables and sampling methodology.</p>
         <p>Four survey waves are currently planned, beginning in January 2027. The exact fieldwork dates are still being determined.</p>
@@ -46,7 +50,8 @@
 
   <footer>
     <div class="container">
-      <p>ELECTRANS &middot; French National Research Agency (ANR)</p>
+      <p>ELECTRANS &middot; Funded by the French National Research Agency (ANR)</p>
+      <p><a href="faq.html">FAQ</a><a href="contact.html">Contact Us</a></p>
     </div>
   </footer>
 </body>

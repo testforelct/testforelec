@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>News and Announcements | ELECTRANS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <a class="logo" href="index.html">ELECTRANS</a>
-      <nav>
+      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"></span>ELECTRANS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" onclick="var n=document.getElementById('site-nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">Menu</button>
+      <nav id="site-nav" aria-label="Main">
         <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="panel.html">The Panel</a></li>
-        <li><a href="how-to-submit.html">How to Submit</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="news.html" class="active">News and Announcements</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="panel.html">The Panel</a></li>
+          <li><a href="how-to-submit.html">How to Submit</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="news.html" class="active" aria-current="page">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -26,13 +30,17 @@
 
   <div class="page-title">
     <div class="container">
-      <h1>News and Announcements</h1>
+      <p class="eyebrow">News</p><h1>News and Announcements</h1>
     </div>
   </div>
 
   <main>
     <div class="container">
       <section>
+        <div class="empty">
+          <h2>No announcements yet</h2>
+          <p>News about the call for proposals and the ELECTRANS surveys will be posted here. Please check back soon.</p>
+        </div>
       </section>
 
     </div>
@@ -40,7 +48,8 @@
 
   <footer>
     <div class="container">
-      <p>ELECTRANS &middot; French National Research Agency (ANR)</p>
+      <p>ELECTRANS &middot; Funded by the French National Research Agency (ANR)</p>
+      <p><a href="faq.html">FAQ</a><a href="contact.html">Contact Us</a></p>
     </div>
   </footer>
 </body>

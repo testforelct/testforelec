@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Submit | ELECTRANS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <a class="logo" href="index.html">ELECTRANS</a>
-      <nav>
+      <a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"></span>ELECTRANS</a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" onclick="var n=document.getElementById('site-nav');var o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">Menu</button>
+      <nav id="site-nav" aria-label="Main">
         <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="panel.html">The Panel</a></li>
-        <li><a href="how-to-submit.html" class="active">How to Submit</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="news.html">News and Announcements</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="panel.html">The Panel</a></li>
+          <li><a href="how-to-submit.html" class="active" aria-current="page">How to Submit</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
     </div>
@@ -26,14 +30,19 @@
 
   <div class="page-title">
     <div class="container">
-      <h1>How to Submit</h1>
+      <p class="eyebrow">Call for proposals</p><h1>How to Submit</h1>
     </div>
   </div>
 
   <main>
     <div class="container">
-      <section>
-        <p>Here is a <a href="ELECTRANS_template.docx" download>submission template</a>. This template might not fit all proposals and can be adapted accordingly.</p>
+      <section class="narrow">
+        <div class="alert" role="status">
+          <span class="alert-icon" aria-hidden="true">!</span>
+          <p><strong>We are not accepting proposals yet.</strong> Please check back soon for the submission email address.</p>
+        </div>
+        <p>Here is a submission template. This template might not fit all proposals and can be adapted accordingly.</p>
+        <p><a class="btn-outline" href="ELECTRANS_template.docx" download>&#8595; Download the submission template (.docx)</a></p>
         <p>Send your submission in Word format to: <a href="mailto:xxx@sciencespo.fr">xxx@sciencespo.fr</a></p>
         <p>Include the following in your email title: <span class="code">SUBELEC</span></p>
         <p>Each proposal must designate a contact author. The submission must be sent from this person&rsquo;s professional email. The contact author must be listed first on page 1 of the proposal. It is the person to whom all correspondence will be sent.</p>
@@ -46,7 +55,8 @@
 
   <footer>
     <div class="container">
-      <p>ELECTRANS &middot; French National Research Agency (ANR)</p>
+      <p>ELECTRANS &middot; Funded by the French National Research Agency (ANR)</p>
+      <p><a href="faq.html">FAQ</a><a href="contact.html">Contact Us</a></p>
     </div>
   </footer>
 </body>
